@@ -4,6 +4,10 @@ node_js:
 
 before_script:
   - npm install
+  - npm install -g nightwatch
 
 script:
   - npm test test/e2e/Pavlov_hVharassment.js
+
+notifications:
+  email: false  
