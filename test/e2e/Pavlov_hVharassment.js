@@ -43,7 +43,7 @@ module.exports = { // addapted from: https://git.io/vodU0
             .pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvcomenttext.png')
             //use input 'lisa kommentaar'
-            .click('input[value="Lisa kommentaar"]')
+            //.click('input[value="Lisa kommentaar"]')
 
 
         browser
