@@ -2,19 +2,36 @@ language: node_js
 node_js:
   - "9"
 
+cache:
+  directories:
+    - node_modules  
+
+env:
+  global:
+    - CXX=g++-4.8
+    - DISPLAY=:99.0
+    - CHROME_BIN=/usr/bin/google-chrome
+
 addons:
   apt:
     sources:
       - google-chrome
     packages:
       - google-chrome-stable
-        
+      - oracle-java8-set-default
+
+
 before_script:
   - npm install
   - npm install -g nightwatch
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 #wait a while before xvfb to start
 
 script:
   - npm test test/e2e/Pavlov_hVharassment.js
+
+after_script:
+  - "sh -e /etc/init.d/xvfb stop"  
 
 notifications:
   email: false  
