@@ -10,7 +10,7 @@ module.exports = { // addapted from: https://git.io/vodU0
             .waitForElementVisible('body')
             //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvLoad.png')
-            .pause(1000)
+            //.pause(1000)
             //use login link "log in"
             .click('a[class="icon-log-in"]')
             .pause(1000)
