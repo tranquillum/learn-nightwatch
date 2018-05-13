@@ -13,23 +13,23 @@ module.exports = { // addapted from: https://git.io/vodU0
             //.pause(1000)
             //use login link "log in"
             .click('a[class="icon-log-in"]')
-            .pause(1000)
+            //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvLOGINform.png')
             //fill username
             .setValue('#loginform-username', 'nightwatch')
-            .pause(1000)
+            //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvLoad_putlogin.png')
-            .pause(1000)
+            //.pause(1000)
             //fill password and press enter
             .setValue('#loginform-password', ['123456As', browser.Keys.ENTER])
-            .pause(1000)
+            //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvLoad_loginsuxcess.png')
-            .pause(1000)
+            //.pause(1000)
             //click 'sullearvutid'      
             .click('a[class="dropdown-toggle icon-laptop"]')
-            .pause(1000)
+            //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvsaList.png')
-            .pause(1000)
+            //.pause(1000)
             //click 'sullearvutid' in drop menu
             .click('a[title="Sülearvutid"]')
             .pause(1000)
