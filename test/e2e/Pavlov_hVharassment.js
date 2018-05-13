@@ -25,7 +25,8 @@ module.exports = { // addapted from: https://git.io/vodU0
             //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvLoad_loginsuxcess.png')
             //.pause(1000)
-            //click 'sullearvutid'      
+            //click 'sullearvutid'     
+            .waitForElementVisible('a[class="dropdown-toggle icon-laptop"]')
             .click('a[class="dropdown-toggle icon-laptop"]')
             //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvsaList.png')
