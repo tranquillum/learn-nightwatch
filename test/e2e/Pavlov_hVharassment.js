@@ -22,6 +22,7 @@ module.exports = { // addapted from: https://git.io/vodU0
             //.pause(1000)
             //fill password and press enter
             .setValue('#loginform-password', ['123456As', browser.Keys.ENTER])
+        console.log('logged')
             //.pause(1000)
             .saveScreenshot(config.imgpath(browser) + 'hvLoad_loginsuxcess.png')
             //.pause(1000)
