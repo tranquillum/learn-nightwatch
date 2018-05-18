@@ -13,7 +13,7 @@ if (!DROPBOX_TOKEN) {
     throw new Error('error: no DROPBOX_TOKEN!');
 }
 
-let uploadPath = '/APPs/learn-nightwatchAPP';
+let uploadPath = '/learn-nightwatc';
 
 if (process.env.TRAVIS !== 'true') {
     uploadPath += `/local/${+ new Date()}`;
