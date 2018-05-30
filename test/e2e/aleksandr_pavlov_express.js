@@ -50,6 +50,8 @@ module.exports = { // addapted from: https://git.io/vodU0
       .moveToElement('a[class="navigation-arrow-link navigation-arrow-link-right issue-cover2-start-reading"]', 1, 1)
       .pause(1000)
       .mouseButtonClick(0)
+      .pause(1000)
+      .click('div[class="right-buttons"]')
 
     browser
       .pause(10000)
@@ -77,7 +79,8 @@ module.exports = { // addapted from: https://git.io/vodU0
       .useCss()
       .setValue('input[type="text"]', ['tallinna polütehnikum', browser.Keys.ENTER])
       .pause(1000)
-      
+      .useXpath()
+      .click('(//a[@href="http://ekspress.delfi.ee/erid/see-maagiline-tehnika?id=78258502#keywords=tallinna%20pol%C3%BCtehnikum"])[2]')
 
 
 
